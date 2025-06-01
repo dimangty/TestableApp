@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "9838D4EB-48AF-443C-B415-544614BAC6CC",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TestableApp.xcodeproj",
+      "identifier" : "7E13782E2B360A1B00C83B78",
+      "name" : "TestableApp"
+    },
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "TestableAppTests"
+      ],
+      "target" : {
+        "containerPath" : "container:TestableApp.xcodeproj",
+        "identifier" : "8BD1FF162DEAFF7B0002857C",
+        "name" : "TestableAppTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TestableApp.xcodeproj",
+        "identifier" : "6C8ED58A2DE0A4D20023F708",
+        "name" : "TestableAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
