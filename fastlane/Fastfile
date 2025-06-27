@@ -13,22 +13,23 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-default_platform(:ios)
 
-platform :ios do
-  desc "Run all tests"
-  lane :test do
-  run_tests(
-    scheme: "testable-view-swiftui",
-    only_testing: ["TestableAppUITests"],
-    clean: false,
-    devices: ["iPhone 16"]
-  )
-  run_tests(
-    scheme: "testable-view-swiftui",
-    only_testing: ["TestableAppTests"],
-    clean: false,
-    devices: ["iPhone 16"]
-  )
-  end
+before_all do |lane, options|
+  'defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES'
+end
+
+desc "Run all tests"
+lane :test do
+run_tests(
+  scheme: "testable-view-swiftui",
+  only_testing: ["TestableAppUITests"],
+  clean: false,
+  devices: ["iPhone 16"]
+)
+run_tests(
+  scheme: "testable-view-swiftui",
+  only_testing: ["TestableAppTests"],
+  clean: false,
+  devices: ["iPhone 16"]
+)
 end
